@@ -126,7 +126,7 @@ object Monday_Basic extends App {
     }
   }
 
-  printIterations("Fizz", "Buzz", 15+)
+  printIterations("Fizz", "Buzz", 15)
 
   println("")
 
