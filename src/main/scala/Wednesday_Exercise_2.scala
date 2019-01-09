@@ -1,33 +1,5 @@
 object Wednesday_Exercise_2 {
 
-  // Returns true if given  // Returns true if given
-
-  // card number is valid
-  def checkLuhn(cardNo: String): Boolean = {
-    val nDigits = cardNo.length
-    var nSum = 0
-    var isSecond = false
-    var i = nDigits - 1
-    while ( {
-      i >= 0
-    }) {
-      var d = cardNo.charAt(i) - '0'
-      if (isSecond == true) d = d * 2
-      // We add two digits to handle
-      // cases that make two digits
-      // after doubling
-      nSum += d / 10
-      nSum += d % 10
-      isSecond = !isSecond
-
-      {
-
-        i -= 1; i + 1
-      }
-    }
-    nSum % 10 == 0
-  }
-
   def main(args: Array[String]): Unit = {
     val cardNo = "4757146859376053"
 
@@ -37,6 +9,25 @@ object Wednesday_Exercise_2 {
       println("This is not a valid card");
 
   }
+
+  def checkLuhn(cardNo:String): Boolean = {
+    val nDigits = cardNo.length
+    var nSum = 0
+    var isSecond = false
+    var i = nDigits - 1
+
+    while (i >= 0) {
+      var d = cardNo.charAt(i) - '0'
+      if (isSecond == true) d = d * 2
+      nSum += d / 10
+      nSum += d % 10
+      isSecond = !isSecond
+      i -= 1; i + 1
+    }
+    nSum % 10 == 0
+  }
+
+
 
 
 }
