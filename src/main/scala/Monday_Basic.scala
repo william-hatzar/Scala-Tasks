@@ -5,7 +5,7 @@ object Monday_Basic extends App {
   println("Hello World")
 
   //Store "Hello World!" in a variable and then output it
-  var output = "Hello World"
+  val output = "Hello World"
   println(output)
 
   //Create a method that accepts a string as a parameter and then outputs that string
@@ -16,16 +16,13 @@ object Monday_Basic extends App {
   output("William")
 
   //Create a method that returns a string, in this case “Hello World!”, which you then use to output
-  def returnOutput(): String = {
-    var name = "Manchester"
-    return name
-  }
+  def returnOutput(): String = "Manchester"
 
   println(returnOutput)
 
   //Crate a method that does not signify a return type and outputs whatever is given to it then
   //test it by passing the following data types, Double, String, Integer, Boolean
-  def squareOf(x: Int) = x * x
+  def squareOf(num1: Int) = num1 * num1
 
   println(squareOf(12))
 
@@ -35,18 +32,15 @@ object Monday_Basic extends App {
   //def lastLetters(x:String,y:Int){
 
   def stringRemover(word: String, x: Int) {
-    var output = word.substring(word.length - x)
-    println(output)
+    println(word.substring(word.length - x))
+
   }
 
   stringRemover("William", 4)
 
   //Create a method that returns two integers as an input and then returns the sum of those
 
-  def addition(num1: Int, num2: Int): Int = {
-    var answer = num1 + num2
-    return answer
-  }
+  def addition(num1: Int, num2: Int): Int = num1 + num2
 
   println("The answer is" + " " + addition(21, 21))
 
@@ -54,11 +48,9 @@ object Monday_Basic extends App {
 
   def conditionalAdditon(num1: Int, num2: Int, checker: Boolean): Int = {
     if (checker == true) {
-      var answer = num1 + num2
-      return answer;
+      num1 + num2
     } else {
-      var answer = num1 * num2
-      return answer
+      num1 * num2
     }
   }
 
@@ -126,7 +118,7 @@ object Monday_Basic extends App {
     }
   }
 
-  printIterations("Fizz", "Buzz", 15+)
+  printIterations("Fizz", "Buzz", 15)
 
   println("")
 
