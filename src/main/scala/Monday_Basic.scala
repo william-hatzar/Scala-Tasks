@@ -61,17 +61,12 @@ object Monday_Basic extends App {
 
   //This method looks to see if a number is 0, if this is the case it will return the number which isnt
   def modifiedConditionalAddition(num1: Int, num2: Int, checker: Boolean): Int = {
-    if (checker == true) {
-      var answer = num1 + num2
-      return answer
-    } else if (num1 == 0) {
-      return num2
-    } else if (num2 == 0) {
-      return num1
-    } else {
-      var answer = num1 * num2
-      return answer
-    }
+    if (checker == true)
+      num1 + num2
+     else if (num1 == 0) num2
+     else if (num2 == 0) num1
+     else num1 * num2
+
   }
 
   println(modifiedConditionalAddition(39, 39, true))
@@ -97,6 +92,8 @@ object Monday_Basic extends App {
       println("")
     }
   }
+
+
 
   iterationsNew("H", 4)
 
