@@ -1,14 +1,14 @@
 object Factorial extends App {
 
   def isFactorial(num1:Int): Unit ={
-    var x = 1
+    var iterator  = 1
     var factorial = 1;
     while (factorial < num1){
-      x = x + 1
-      factorial = factorial * x;
+      iterator = iterator + 1
+      factorial = factorial *iterator;
     }
 
-    if(factorial == num1) print(num1,x)
+    if(factorial == num1) print(num1,iterator)
     else println("NONE")
 
   }
