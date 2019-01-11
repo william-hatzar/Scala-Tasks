@@ -13,7 +13,7 @@ object Factorial extends App {
 
   }
 
-  isFactorial(18)
+  isFactorial(7257600)
 
 
 }
