@@ -1,3 +1,5 @@
+
+
 object Factorial extends App {
 
   def isFactorial(num1:Int): Unit ={
@@ -14,6 +16,5 @@ object Factorial extends App {
   }
 
   isFactorial(7257600)
-
 
 }
