@@ -1,11 +1,19 @@
-object Calculator extends App{
+object Calculator extends App {
 
-  def addition(num1:Int,num2:Int) : Int = num1 + num2
+//Testing out tests
 
-  println(addition(15,15))
+def addition(num1:Int,num2:Int) : Int = num1 + num2
 
+println(addition(21,21))
 
 
 }
+
+
+
+
+
+
+
 
 
