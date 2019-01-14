@@ -1,19 +1,16 @@
-class Person(var name: String, var age: Int)
+
 
 
 object Main extends App{
 
-  def showEvaluationOnCall() :Unit = {
-    val person = new Person("John",36)
+  def favouriteBeer(): String = "Guinness"
 
-    println("Person age is " + person.age)
+  println(s"My favourite beer is ${favouriteBeer()}")
 
-    person.age = 32
+  val tuple = ('a', "b", 3 , 4.56)
+  tuple._1
 
-    println("Persons age is: " + person.age)
-  }
 
-showEvaluationOnCall()
 
 
 }
