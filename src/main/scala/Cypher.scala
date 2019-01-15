@@ -1,34 +1,34 @@
-object Cypher {
+object Cypher extends App {
 
-  def main (args: Array[String]): Unit =
-  {
-    val allChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    println("Enter text to convert to cipher")
-    val a = scala.io.StdIn.readLine()
-    var plainText = a
-    plainText = plainText.replaceAll(" ", "")
-    plainText = plainText.toUpperCase
-    val len = plainText.length
-    val len1 = allChar.length
-    var cipher = ""
-    var i = 0
-    var j = 0
+  object Cypher extends App {
 
-    while(i < len){
-      val b = plainText.charAt(i)
-      while(j < len1){
-        val c = allChar.charAt(j)
-        if(c == b){
-          val index = allChar.indexOf(c)
-          val position = (len1-1)-index
-          //cipher = cipher + allChar.charAt(position)
-          cipher = cipher + allChar(position)
-        }
-        j = j + 1;
-      }
-      i = i + 1;
+    def cypherlookup(letter:String): String = {
+
+      val map = Map("a" -> "z", "b" -> "y", "c" -> "x", "d" -> "w", "e" -> "v", "f" -> "u", "g" -> "t",
+        "h" -> "s", "i" -> "r", "j" -> "q", "k" -> "p", "l" -> "o", "m" -> "n", "n" -> "m", "o" -> "l",
+        "p" -> "k", "q" -> "j", "r" -> "i", "s" -> "h", "t" -> "g", "u" -> "f", "v" -> "e", "w" -> "d", "x" -> "c", "y" -> "b", "z" -> "a")
+
+      map(letter)
+
     }
-    println(cipher)
+
+
+    def reassignment(word:String): Unit ={
+
+      var newWord = ""
+
+      for (i<- 0 until word.length){
+        newWord+= cypherlookup(word.substring(i,i+1))
+      }
+      print(newWord)
+
+    }
+
+    reassignment("hello")
+
   }
+
+
+
 }
 
